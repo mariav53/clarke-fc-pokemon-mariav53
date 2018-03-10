@@ -5,8 +5,7 @@ render(){
 	return(
 		<div className="search">
       <div className ="search_container">
-				<h2>Encuentra a tu Pokemon favorito</h2>
-				<input type="text" name="search" placeholder="Buscar" id="search" onChange={this.props.pokemonSearch} />
+				<input type="text" name="search" placeholder="Encuentra a tu Pokemon favorito" id="search" onChange={this.props.pokemonSearch} />
       </div>
 		</div>
 		);

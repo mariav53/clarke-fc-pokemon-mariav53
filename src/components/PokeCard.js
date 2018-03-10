@@ -22,7 +22,7 @@ class PokeCard extends Component {
             <div className="pokemonCard__types">
               <ul className="pokemon__types__list">
                 {this.props.types.map((type, index) =>
-                  <li key={index} className={`pokemon__type type type--${type.toLowerCase()}`}>
+                  <li key={index} className={`pokemon__type type--${type.toLowerCase()}`}>
                     {type}
                   </li>)}
               </ul>
