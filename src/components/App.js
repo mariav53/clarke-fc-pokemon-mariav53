@@ -9,12 +9,11 @@ class App extends Component {
     this.handleFilterPokemons = this.handleFilterPokemons.bind(this);
     this.state = {
       species: [], //arrary de pokemons
-      filteredPokemon: '' //lista para el filtrado
+      filteredPokemonByName: ''//lista para el filtrado
     }
   }
-
   componentDidMount () {
-    for (let pokeID = 1; pokeID <=4; pokeID++) {
+    for (let pokeID = 1; pokeID <=25; pokeID++) {
       fetch(`https://pokeapi.co/api/v2/pokemon/${pokeID}/`)
       .then(response => response.json())
       .then(results => {
@@ -26,17 +25,14 @@ class App extends Component {
       })
     }
   }
-
   handleFilterPokemons (e) {
     this.setState({
-      filteredPokemon: e.target.value.toLowerCase()
+      filteredPokemonByName: e.target.value.toLowerCase()
     })
   }
-
   showPokemons () {
     let species = this.state.species
-    species = species.filter(pokemon => pokemon.name.toLowerCase().includes(this.state.filteredPokemon));
-
+    species = species.filter(pokemon => pokemon.name.toLowerCase().includes(this.state.filteredPokemonByName))
     return(
       <ul className="pokemons__list">
         {species.sort((a,b) => a.id - b.id).map((pokemon, index) => //se ordenan los resultados por id
@@ -52,11 +48,14 @@ class App extends Component {
       </ul>
     );
   }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Search pokemonSearch={this.handleFilterPokemons} />
+        <Search
+          pokemonSearch={this.handleFilterPokemons}
+        />
         <div className="pokedex">
           <div className="pokedex__container">
             {this.showPokemons()}
@@ -66,5 +65,4 @@ class App extends Component {
     );
   }
 }
-
-  export default App;
+export default App;

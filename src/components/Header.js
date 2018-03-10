@@ -6,12 +6,11 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header__container">
-          <img src={logo} alt="Pokedex" />
+          <img src={logo} alt="Pokedex" title="Pokedex logo" />
         </div>
         <div className="header_fringe"></div>
       </div>
     );
   }
 }
-
 export default Header;
