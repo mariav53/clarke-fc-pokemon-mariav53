@@ -1,6 +1,8 @@
 #  Prueba técnica 1: Pokedex
 Desarrollar un sencillo pokedex para consultar los distintos tipos de pokemon y algunas características
 
+![image design](/src/assets/pokedex-design.png)
+
 ## Especificaciones
 Desarrollo de webapp usando React y la API de pokemon *PokeAPI*.
 

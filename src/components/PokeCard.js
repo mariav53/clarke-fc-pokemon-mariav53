@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 
 class PokeCard extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      pokemonsObjects: []
-    }
-  }
-   render () {
-     return (
+  render () {
+    return (
       <div className="pokemonCard">
         <div className ="pokemonCard__container">
-
           <div className="pokemonCard__img">
             <img className="pokemon__image" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.id}.png`} alt= {this.props.name} />
           </div>
@@ -26,7 +18,6 @@ class PokeCard extends Component {
                     {type}
                   </li>)}
               </ul>
-              {/* <p>{this.props.types.join(' | ')}</p> */}
             </div>
           </div>
         </div>

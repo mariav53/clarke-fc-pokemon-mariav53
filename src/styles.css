@@ -45,11 +45,9 @@
     font-size: 1.1em;
     color: #000;
     margin-right: 10px; }
-    .search_container #search #search::placeholder {
-      color: white; }
     @media (min-width: 472px) and (max-width: 767px) {
       .search_container #search {
-        font-size: 1.3em; } }
+        font-size: 1.5em; } }
     @media all and (min-width: 768px) {
       .search_container #search {
         padding: 10px 0;
@@ -58,15 +56,18 @@
         background: none;
         border: none;
         border-bottom: 6px solid #000;
-        font-size: 34px;
+        font-size: 2.125em;
         margin-right: 10px;
         margin-bottom: 0; } }
   .search_container #search:focus {
     outline: none; }
 
+input::placeholder {
+  color: black; }
+
 /*----GRID ---*/
 .pokedex {
-  padding: 20px 0; }
+  padding: 21px 0; }
 
 .pokemons__list {
   list-style-type: none;
