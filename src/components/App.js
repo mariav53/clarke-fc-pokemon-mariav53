@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import PokeCard from './PokeCard';
 import Header from './Header';
+import PokeCard from './PokeCard';
+import Search from './Search';
+
 
 const url = 'https://pokeapi.co/api/v2/pokemon/'
 
@@ -37,7 +39,7 @@ class App extends Component {
       species = species.filter(pokemon => pokemon.name.toLowerCase().includes(this.state.filteredPokemon));
 
       return(
-        <ul className="pokemon__list">
+        <ul className="pokemons__list">
           {species.map((pokemon, index) =>
               <li className="pokemons__item" key={index}>
                 <PokeCard
@@ -56,9 +58,9 @@ class App extends Component {
       return (
         <div className="App">
           <Header />
+          <Search pokemonSearch={this.handleFilterPokemons} />
           <div className="pokedex">
             <div className="pokedex__container">
-              <input className="input__search" onChange={this.handleFilterPokemons}/>
               {this.showPokemons()}
             </div>
           </div>
