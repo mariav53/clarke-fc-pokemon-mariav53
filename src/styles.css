@@ -8,6 +8,13 @@
   background: #c5c5c5;
   height: 100%; }
 
+.header {
+  padding-bottom: 20px; }
+
+.header__container {
+  background: #ff1c1c;
+  padding: 20px 0; }
+
 .header__container img {
   margin-bottom: 10px; }
 
@@ -64,7 +71,7 @@
 
 .pokemonCard__info {
   background: #fff;
-  padding: 19px 0; }
+  padding: 7px 0; }
 
 .pokemon_name {
   color: #000;

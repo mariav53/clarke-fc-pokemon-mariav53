@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 
 class PokeCard extends Component {
-  render() {
-    const {name,id} = this.props;
-    return (
-      <div className="pokemonCard">
-	      <div className ="pokemonCard__container">
-					<div className="pokemonCard__img">
-						{/* <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={name} title={name} /> */}
-					</div>
-					<div className="pokemonCard__info">
-						<p className="pokemon__name"> {name.toUpperCase()}</p>
-						<p className="pokemon__id"> #{id}</p>
-						<div className="pokemonCard__types">
-							<p>{this.props.type}</p>
-						</div>
-					</div>
-	      </div>
-			</div>
-    );
-  }
-}
+  constructor(props){
+     super(props);
 
-export default PokeCard;
+     this.state = {
+       pokemonsObjects: []
+     }
+   }
+   render () {
+
+     return (
+         <div className="pokemon__container">
+           <h2 className="pokemon__name">Nº {this.props.id}  {this.props.name} </h2>
+           <img className="pokemon__image" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.id}.png`} alt= {this.props.name}/>
+           <ul className="pokemon__types--list">
+             {this.props.types.map((type, index) =>
+               <li key={index} className="pokemon__type">
+                 {type}
+               </li>)}
+           </ul>
+         </div>
+     );
+   }
+ }
+
+ export default PokeCard;
