@@ -14,8 +14,8 @@ class App extends Component {
   }
 
   componentDidMount () {
-    for (let i = 1; i <=4; i++) {
-      fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`)
+    for (let pokeID = 1; pokeID <=4; pokeID++) {
+      fetch(`https://pokeapi.co/api/v2/pokemon/${pokeID}/`)
       .then(response => response.json())
       .then(results => {
         let pokemonJson = this.state.species;
@@ -40,7 +40,7 @@ class App extends Component {
     return(
       <ul className="pokemons__list">
         {species.sort((a,b) => a.id - b.id).map((pokemon, index) => //se ordenan los resultados por id
-          <li className="pokemons__item" >
+          <li className="pokemons__item" key={index} >
             <PokeCard
               key={index}
               id={pokemon.id}
