@@ -17,13 +17,19 @@ class App extends Component {
     }
 
     componentDidMount () {
-      for (let i = 1; i < 3; i++) {
+      for (let i = 1; i <=25; i++) {
         fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         .then(response => response.json())
         .then(results => {
-          this.setState({
-            species: this.state.species.concat([results])
-          })
+          let pokemon = this.state.species;
+  			     pokemon.sort(this.state.species.index)
+  			     pokemon.push(results)
+  			      this.setState({
+  				          species: pokemon
+  			             });
+          // this.setState({
+          //  species: this.state.species.concat([results]) //para concatenar todos los pokemons en array species
+          // })
         })
       }
     }
@@ -40,9 +46,12 @@ class App extends Component {
 
       return(
         <ul className="pokemons__list">
-          {species.map((pokemon, index) =>
-              <li className="pokemons__item" key={index}>
-                <PokeCard
+
+          {species.sort((id) => species.id).map((pokemon, index) =>
+            // {species.map((pokemon, index) =>
+            <li className="pokemons__item" >
+              <PokeCard
+                key={index}
                   id={pokemon.id}
                   name={pokemon.name}
                     types= {pokemon.types.map((t) => t.type.name)}
