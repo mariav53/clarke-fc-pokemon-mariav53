@@ -91,7 +91,7 @@ input::placeholder {
 
 /*----POKECARD --*/
 .pokemonCard {
-  height: 250px;
+  height: 295px;
   border: 10px solid #fff;
   background-color: #ebebeb;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -165,3 +165,6 @@ input::placeholder {
 
 .type--water {
   background-color: #1552e2; }
+
+.pokemonInfo {
+  background: coral; }
