@@ -3,14 +3,12 @@ import Header from './Header';
 import PokeCard from './PokeCard';
 import PokeList from './PokeList';
 import Search from './Search';
-// import { Link, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       arraySpecies: [], //arrary de pokemons
-      arrayEvolution : [], //arrary de evoluciones
       filteredPokemonByName: ''//lista para el filtrado
     }
   }
