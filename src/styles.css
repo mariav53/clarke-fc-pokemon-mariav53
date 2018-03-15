@@ -91,7 +91,7 @@ input::placeholder {
 
 /*----POKECARD --*/
 .pokemonCard {
-  height: 295px;
+  height: 300px;
   border: 10px solid #fff;
   background-color: #ebebeb;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -125,6 +125,9 @@ input::placeholder {
   position: absolute;
   left: 2%;
   bottom: 10%; }
+
+.pokemon__abilities__list {
+  list-style-type: none; }
 
 .pokemon__type {
   display: inline-block;

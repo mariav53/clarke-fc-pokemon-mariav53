@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import PokeInfo from './PokeInfo';
+
+import PokeEvolution from './PokeEvolution';
+
 
 class PokeCard extends Component {
+
   render () {
+     const { evolution }  = this.props
     return (
       <div className="pokemonCard">
         <div className ="pokemonCard__container">
@@ -19,6 +25,18 @@ class PokeCard extends Component {
                   </li>)}
               </ul>
             </div>
+            <div className="pokemonCard__abilities">
+              <ul className="pokemon__abilities__list">
+                {this.props.abilities.map((ability, index) =>
+                  <li key={index} className={`pokemon__ability ability--${ability.toLowerCase()}`}>
+                    {ability}
+                  </li>)}
+              </ul>
+            </div>
+            <div className="pokemonCard__evolution">
+              {/* {evolution} */}
+            </div>
+
           </div>
         </div>
       </div>
