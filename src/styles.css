@@ -5,6 +5,9 @@
   padding: 0;
   font-family: sans-serif; }
 
+body {
+  background: #c5c5c5; }
+
 .App {
   text-align: center;
   background: #c5c5c5;
@@ -76,6 +79,8 @@ input::placeholder {
   max-width: 1080px;
   margin: 0 auto 50px;
   padding: 0 10px; }
+  .pokemons__list .pokemons__item:hover {
+    transform: scale(1.1); }
   @media (min-width: 472px) and (max-width: 767px) {
     .pokemons__list {
       grid-template-columns: 1fr 1fr; } }
@@ -85,13 +90,10 @@ input::placeholder {
   @media all and (min-width: 949px) {
     .pokemons__list {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
-  @media (min-width: 472px) {
-    .pokemons__list .pokemons__item:hover {
-      transform: scale(1.1); } }
 
 /*----POKECARD --*/
 .pokemonCard {
-  height: 300px;
+  height: 250px;
   border: 10px solid #fff;
   background-color: #ebebeb;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -169,5 +171,54 @@ input::placeholder {
 .type--water {
   background-color: #1552e2; }
 
-.pokemonInfo {
-  background: coral; }
+/*----POKEMON DETAILS --*/
+.pokemonInfo__container {
+  background: #fff;
+  display: grid;
+  max-width: 1000px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.pokemonInfo__types__list li, .pokemonInfo__abilities__list li {
+  list-style-type: none; }
+
+.pokemonInfo__img, .pokemonInfo__details {
+  padding: 20px 10px; }
+
+.pokemonInfo__img {
+  position: relative;
+  background: #ebebeb;
+  border: 18px solid white; }
+
+.pokemonInfo__image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%; }
+
+.pokemonInfo__name {
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 15px; }
+
+.pre-text {
+  font-weight: bold; }
+
+.pokemon__ability {
+  margin: 5px 0; }
+
+table {
+  margin: 0 auto; }
+
+table td {
+  text-align: left;
+  padding: 6px 35px; }
+
+table tr:nth-child(odd) {
+  background-color: #ebebeb; }
