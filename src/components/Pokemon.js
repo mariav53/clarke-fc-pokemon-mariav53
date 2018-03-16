@@ -28,7 +28,7 @@ class Pokemon extends Component {
        console.log(results);
     })
   }
-
+  
   async componentDidMount() {
     const {match : {params}} = this.props //paso id por parametro del router
     this.pokemonById(params.id)
