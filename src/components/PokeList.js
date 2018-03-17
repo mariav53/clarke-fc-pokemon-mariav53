@@ -13,7 +13,7 @@ class PokeList extends Component {
   }
 
   getPokemons() {
-    for (let pokeID = 1; pokeID <=4; pokeID++) {
+    for (let pokeID = 1; pokeID <=25; pokeID++) {
        fetch(`https://pokeapi.co/api/v2/pokemon/${pokeID}/`)
        .then(response => response.json())
        .then(results => {
