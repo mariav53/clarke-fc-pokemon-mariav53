@@ -41,6 +41,7 @@ class Pokemon extends Component {
         <div className ="pokemonInfo__container">
           <div className="pokemonInfo__img">
             <img className="pokemonInfo__image" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${params.id}.png`} alt= {params.name} />
+
           </div>
           <div className="pokemonInfo__details">
             <p className="pokemonInfo__name">{this.state.pokemonData.name.toUpperCase()}</p>
