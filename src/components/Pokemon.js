@@ -14,7 +14,6 @@ class Pokemon extends Component {
         types: [],
         abilities: [],
       }
-      // pokemonData : []
     }
   }
 
@@ -28,7 +27,7 @@ class Pokemon extends Component {
        console.log(results);
     })
   }
-  
+
   async componentDidMount() {
     const {match : {params}} = this.props //paso id por parametro del router
     this.pokemonById(params.id)
@@ -46,7 +45,7 @@ class Pokemon extends Component {
           <div className="pokemonInfo__details">
             <p className="pokemonInfo__name">{this.state.pokemonData.name.toUpperCase()}</p>
             <table>
-              <tbody>
+            <tbody>
               <tr>
                 <td><span className="pre-text">ID:</span></td>
                 <td className="pokemonInfo__id"> #{this.state.pokemonData.id.toLocaleString('en-US', {minimumIntegerDigits: 2})}</td>
